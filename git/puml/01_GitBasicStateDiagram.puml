@@ -1,0 +1,19 @@
+@startuml
+state Local {
+    state "Working\nDirectory" as WD {
+    }
+    state "Staging\nArea" as SA {
+    } 
+    state "Repository" as Re {
+    }
+    Re : 1. **git init**
+
+    WD : 2. vim A.txt \n// 파일 생성
+    WD -> SA : 3. **git add A.txt**
+
+    SA : 4. A.txt in Staging Area
+    SA -> Re : 5. **git commit**
+
+    Re : 5. A.txt committed
+}
+@enduml

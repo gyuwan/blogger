@@ -1,0 +1,16 @@
+@startuml
+state Local {
+    state "Working Directory" as WD {
+    }
+    state "Staging Area" as SA {
+    } 
+    state Repository {
+    }
+}
+
+state Remote {
+    state "Repository" as RemoteRepository {
+    }
+}
+
+@enduml

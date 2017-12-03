@@ -1,0 +1,16 @@
+@startuml
+state Local {
+    state "Working Directory" as WD {
+    }
+    state "Staging Area" as SA {
+    } 
+    state Repository {
+    }
+    WD : 신규 혹은 수정된 파일들\n
+    WD : (= Working Copy, Working Tree)
+    SA  : 다음 Commit을 위한 파일들\n
+    SA : (= Index)
+    Repository : Git에서 관리되는 모든 파일들;\nMetadata, object database\n
+    Repository : (= .git Directory)
+}
+@enduml
